@@ -103,7 +103,7 @@ for p in range(2,loopnumber):
     data = data.append(data2)
 
 leftovers = results-page_size_max*loopnumber
-data_final,_=api_call_per_page(loopnumber+1,leftovers)
+data_final,_= api_call_per_page(loopnumber,leftovers)
 data = data.append(data_final)
 
 data = data.reset_index(drop=True)
